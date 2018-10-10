@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 
 ReactDOM.render(
     <h1>
-        ReactJS agora com JSX
+        Bem-vindo ao React com html-webpack-plugin
     </h1>,
     document.querySelector("#main")
 )
