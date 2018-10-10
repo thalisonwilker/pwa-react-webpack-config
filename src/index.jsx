@@ -1,18 +1,9 @@
-import {React, createElement} from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom'
 
-let h1 = createElement(
-    'h1',
-    {
-        style: {
-            textAlign: 'center',
-            fontFamily: 'Consolas'
-        }
-    },
-    'ReactJS'
-)
-
 ReactDOM.render(
-    h1,
+    <h1>
+        ReactJS agora com JSX
+    </h1>,
     document.querySelector("#main")
 )
