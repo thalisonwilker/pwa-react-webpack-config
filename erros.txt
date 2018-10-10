@@ -1,0 +1,15 @@
+Hash: 8bf6849d42ba2376c550
+Version: webpack 3.0.0
+Time: 80ms
+    Asset     Size  Chunks             Chunk Names
+bundle.js  2.79 kB       0  [emitted]  main
+   [0] ./src/index.jsx 321 bytes {0} [built] [failed] [1 error]
+
+ERROR in ./src/index.jsx
+Module parse failed: C:\Users\Notebook Wanzelle\Desktop\react-apps\testemyapp.com\back-end\src\index.jsx Unexpected token (6:4)
+You may need an appropriate loader to handle this file type.
+| 
+| ReactDOM.render(
+|     <h1>react js</h1>,
+|     document.querySelector("#main")
+| )
