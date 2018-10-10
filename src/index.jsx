@@ -1,9 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import './img/favicon.ico';
 
 ReactDOM.render(
     <h1>
-        Bem-vindo ao React com html-webpack-plugin
+        Bem-vindo ao Reactjs
     </h1>,
     document.querySelector("#main")
 )
