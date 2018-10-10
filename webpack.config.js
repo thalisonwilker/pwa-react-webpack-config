@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const path = require('path');
 const htmlWebpackPlugin = require('html-webpack-plugin');
+const extractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
 
@@ -19,13 +20,14 @@ module.exports = {
         new htmlWebpackPlugin({
             filename: 'index.html',
             template: path.join(__dirname, 'src/index.html')
-        })
+        }),
+        new extractTextPlugin('style.css')
     ],
 
 
     module: {
         rules: [
-            {
+          /* babel */  {
                 test: /.jsx?$/,
                 exclude: /node_modules/,
                 include: path.join(__dirname, 'src'),
@@ -38,9 +40,18 @@ module.exports = {
                     }
                 ]
             },
-            {
+          /* favicon */  {
                 test: /\.(jpe?g|ico|png|gif|svg)$/i,
                 loader: 'file-loader?name=img/[name].[ext]'
+            },
+          /* css */  {
+                test: /\.css$/,
+                use: extractTextPlugin.extract(
+                    {
+                        fallback: 'style-loader',
+                        use: 'css-loader'
+                    }
+                )
             }
         ]
     },
