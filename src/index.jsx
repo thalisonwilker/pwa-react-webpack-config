@@ -2,13 +2,13 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './img/favicon.ico';
 
-import './css/pure-min.css';
+import './css/bootstrap.min.css';
 import './css/index.css';
+
+import App from './components/App'
 
 
 ReactDOM.render(
-    <h1>
-        Bem-vindo ao Reactjs
-    </h1>,
+    <App />,
     document.querySelector("#main")
 )
